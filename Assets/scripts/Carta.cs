@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Carta : MonoBehaviour {
-	public GameObject[] imagens;
+
+	public Sprite[] imagens ;
+	private string way = "carros/";
+	private Button batata;
+
 	// Use this for initializtion
 	void Start () {
-		for (int tw = 1; tw < 9; tw++) {
-			imagens[] = Resources.Load("carros1") as GameObject;
-		}
+		imagens = Resources.LoadAll<Sprite> (way);
+		batata = GetComponent<Button> ();
+		//batata.image = imagens [Random.Range (0, imagens.Length)];
+		//batata.sprite = imagens [Random.Range (0, imagens.Length)];
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }
