@@ -5,17 +5,19 @@ public class Cards : MonoBehaviour {
 
 	public GameObject cartas, canvas;
 	public Transform posiçao;
-	private GameObject linha;
-	public 
+	public static GameObject[] linha;
+	//public static int ue;
 	// Use this for initialization
 	void Start () {
-
+		linha = new GameObject[6];
 		for (int ue = 0; ue < 6; ue++) {
-			GameObject linha = Instantiate (cartas) as GameObject;
+			linha[ue] = Instantiate (cartas) as GameObject;
 			posiçao.transform.position = new Vector3(posiçao.transform.position.x + ue + 100 , posiçao.transform.position.y , transform.position.z); 
-			linha.transform.SetParent (canvas.transform);
-			linha.transform.localPosition = posiçao.transform.position;
-			linha.transform.rotation = Quaternion.identity;
+			linha[ue].transform.SetParent (canvas.transform);
+			linha[ue].transform.localPosition = posiçao.transform.position;
+			linha[ue].transform.rotation = Quaternion.identity;
+			linha[ue].name = ue.ToString();
+
 		}
 
 

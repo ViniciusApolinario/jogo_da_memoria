@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\Ativa.cs" />
      <Compile Include="Assets\scripts\Cards.cs" />
      <Compile Include="Assets\scripts\Carta.cs" />
  <Reference Include="UnityEngine.UI">
